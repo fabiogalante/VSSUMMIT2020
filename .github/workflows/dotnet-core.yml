@@ -20,8 +20,8 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: Install dependencies
-      run: dotnet restore -s src
+      run: dotnet restore -s src/vssummit
     - name: Build
-      run: dotnet build -s src --configuration Release --no-restore
+      run: dotnet build -s src/vssummit --configuration Release --no-restore
     - name: Test
-      run: dotnet test -s src --no-restore --verbosity normal
+      run: dotnet test -s src/vssummit --no-restore --verbosity normal
